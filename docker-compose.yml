@@ -1,19 +1,8 @@
 version: '2'
 
 services:
-  web:
-    image: web
+  myhealth.web:
+    image: myhealth.web
     build:
-      context: .
-      dockerfile: ./src/Dockerfile
-    depends_on:
-      - db
-    ports: 
-      - "8081:8080"
-  db:
-    image: db
-    build:
-      context: ./src/db
+      context: ./src/MyHealth.Web
       dockerfile: Dockerfile
-    expose:
-      - "3306"
